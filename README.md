@@ -78,7 +78,9 @@ O site Foodly está hospedado localmente via Nginx em um container Docker, acess
 ## Integrantes do projeto
 
 Lucas Aurelio de Brito Chicote - RM: 559366
+
 Henrique Marques Sladkevicius - RM: 560698
+
 Lucas Gomes de Araujo Lopes - RM: 559607
 
 
