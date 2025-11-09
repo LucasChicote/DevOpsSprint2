@@ -15,6 +15,10 @@ Nessa sprint foi criada uma Máquina Virtual no prvedor de Nuvem(Azure) por Debi
 
 ## Segue passo a passo dos comandos para o **deployment**
 
+## Arquitetura macro
+<img width="934" height="430" alt="Arquitetura macro" src="https://github.com/user-attachments/assets/cdaa7935-3f34-47ba-91d8-561be5926a16" />
+
+
 Execultar a sequência de comandos para o deploy
 
 1️⃣ Criar um container Nginx inicial 
