@@ -20,23 +20,30 @@ Execultar a sequência de comandos para o deploy
 1️⃣ Criar um container Nginx inicial 
 Primeiro, foi criado um container básico do Nginx para testar se o serviço estava rodando corretamente:
 
-**docker run --name AppFoodly -p 8082:80 -d nginx**
+```bash
+docker run --name AppFoodly -p 8082:80 -d nginx
+```
 * Esse comando cria um container chamado AppFoodly, mapeando a porta local 8082 para a porta 80 do Nginx.
 * A página exibida é a padrão do Nginx.
 
 2️⃣ Remover container duplicado (em caso de conflito)
 Se já existir um container com o mesmo nome *AppFoodly*, o Docker exibirá o erro:
 
+```bash
 Error response from daemon: Conflict. The container name "/AppFoodly" is already in use
-
+```
 Para resolver, basta remover o container antigo:
 
-**docker rm -f AppFoodly**
+```bash
+docker rm -f AppFoodly
+```
 
 3️⃣ Subir o container com o site montado
 Agora sim, monte o volume do seu projeto local no diretório padrão do Nginx (/usr/share/nginx/html):
 
-**docker run --name AppFoodly -p 8082:80 -v "C:\Users\lucas\Desktop\Sprint2\App:/usr/share/nginx/html" -d nginx**
+```bash
+docker run --name AppFoodly -p 8082:80 -v "C:\Users\lucas\Desktop\Sprint2\App:/usr/share/nginx/html" -d nginx
+```
 
 ### Explicação dos parâmetros
 | Parâmetro                                                       | Função                                                                         |
@@ -49,23 +56,31 @@ Agora sim, monte o volume do seu projeto local no diretório padrão do Nginx (/
 4️⃣ Acessar o site
 Abra no navegador:
 
-**http://localhost:8082**
+```bash
+http://localhost:8082
+```
 
 5️⃣ Parar ou remover o container
 
 Para parar o container:
 
-**docker stop AppFoodly**
+```bash
+docker stop AppFoodly
+```
 
 Para removê-lo:
 
-**docker rm AppFoodly**
+```bash
+docker rm AppFoodly
+```
 
 6️⃣ Rode o container novamente, com o volume correto
 
 Agora, execute este comando ajustado:
 
-**docker run --name AppFoodly -p 8082:80 -v "C:\Users\lucas\Desktop\Sprint2\App:/usr/share/nginx/html" -d nginx**
+```bash
+docker run --name AppFoodly -p 8082:80 -v "C:\Users\lucas\Desktop\Sprint2\App:/usr/share/nginx/html" -d nginx
+```
 
 # Resultado Final
 
